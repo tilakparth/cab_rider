@@ -1,3 +1,4 @@
+import 'package:cab_rider/screens/loginPage.dart';
 import 'package:cab_rider/screens/mainpage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Brand-Regular',
         primarySwatch: Colors.blue,
       ),
-      home: MainPage(),
+      home: LoginPage(),
     );
   }
 }
