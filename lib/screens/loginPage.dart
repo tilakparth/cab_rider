@@ -1,8 +1,10 @@
+import 'package:cab_rider/screens/registrationpage.dart';
 import 'package:flutter/material.dart';
 import 'package:cab_rider/widgets/TaxiButton.dart';
 import 'package:cab_rider/brand_colors.dart';
 
 class LoginPage extends StatelessWidget {
+  static const String id = "login";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +75,10 @@ class LoginPage extends StatelessWidget {
                         onPressed: () {},
                       ),
                       FlatButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamedAndRemoveUntil(
+                                context, RegistrationPage.id, (route) => false);
+                          },
                           child: Text('Don\'t have an account, sign up here')),
                     ]))
               ],

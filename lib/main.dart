@@ -1,9 +1,9 @@
 import 'package:cab_rider/screens/loginPage.dart';
 import 'package:cab_rider/screens/mainpage.dart';
+import 'package:cab_rider/screens/registrationpage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_database/ui/firebase_animated_list.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +28,12 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Brand-Regular',
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: RegistrationPage(),
+      routes: {
+        LoginPage.id: (context) => LoginPage(),
+        RegistrationPage.id: (context) => RegistrationPage(),
+        MainPage.id: (context) => MainPage(),
+      },
     );
   }
 }
